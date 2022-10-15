@@ -1,0 +1,23 @@
+Mini Dic é um mini dicionário bilingue.
+O programa foi criado como exemplo de programação cliente-servidor usando node-js,
+javascript e html.
+
+Instalação:
+
+Escolha uma pasta no seu computador onde será instalado o produto. Copie para esta pasta os arquivos fornecidos com a distribuição. Será criada uma nova pasta chamada pescadores_nnn, onde nnn é o número da versão do produto. Consulte o manual para entender como utilizar o produto.
+
+Sobre o licenciamento deste produto, leia o arquivo COPIANDO.
+
+Histórico:
+
+Versão 0.8 - 2022-10-10
+  Funcionalidade básica implementada, com múltiplos dicionários, busca de palavras e apresentação de verbete.
+  Dicionários bilingues em arquivos .CSV (podem ser criados novos/ampliados/modificados)
+
+  Problemas conhecidos: A busca só aceita palavras em letras minúsculas.
+  O programa não foi completamente testado.
+
+Versão 0.82 - 2022-10-17
+  Corrigido o problema da busca em minúsculas. O usuário pode usar qualquer combinação de caixa alta/caixa baixa;
+  Documentação adicionada ao programa básico.
+

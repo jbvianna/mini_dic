@@ -1,0 +1,20 @@
+{
+  "name": "mini_dic",
+  "author": "João Vianna <jvianna@gmail.com>",
+  "version": "0.6.0",
+  "description": "Mini Dicionário usando node.js",
+  "license": "Apache License, Version 2.0",
+  "keywords": [
+    "dictionary"
+    ],
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "node main.js"
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 5.0.0"
+  },
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
+}

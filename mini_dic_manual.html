@@ -1,0 +1,299 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.1.5.2 (Linux)"/>
+	<meta name="created" content="2022-10-15T06:10:10.946345258"/>
+	<meta name="changed" content="2022-10-15T08:02:03.668842916"/>
+	<style type="text/css">
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		p { margin-bottom: 0.25cm; background: transparent; line-height: 115%; background: transparent }
+		p.western { font-family: "Liberation Sans", sans-serif }
+		h1 { margin-bottom: 0.21cm; background: transparent; background: transparent; page-break-after: avoid }
+		h1.western { font-family: "Liberation Sans", sans-serif; font-size: 18pt; font-weight: bold }
+		h1.cjk { font-family: "Noto Sans CJK SC Regular"; font-size: 18pt; font-weight: bold }
+		h1.ctl { font-family: "FreeSans"; font-size: 18pt; font-weight: bold }
+		h2 { margin-top: 0.35cm; margin-bottom: 0.21cm; background: transparent; background: transparent; page-break-after: avoid }
+		h2.western { font-family: "Liberation Sans", sans-serif; font-size: 16pt; font-weight: bold }
+		h2.cjk { font-family: "Noto Sans CJK SC Regular"; font-size: 16pt; font-weight: bold }
+		h2.ctl { font-family: "FreeSans"; font-size: 16pt; font-weight: bold }
+		strong { font-weight: bold }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+		a:visited { color: #800000; so-language: zxx; text-decoration: underline }
+	</style>
+</head>
+<body lang="pt-BR" link="#000080" vlink="#800000" dir="ltr"><h1 class="western" align="center">
+Mini Dicionário</h1>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<h2 class="western">Instalação</h2>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Este
+programa funciona em uma arquitetura cliente-servidor. Como
+preparação, você deve instalar node.js (<a href="https://nodejs.org/pt-br/">https://nodejs.org/pt-br/</a>)
+no computador que vai servir como o servidor. 
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Crie
+uma nova pasta no mesmo computador e copie para lá os arquivos
+fornecidos, mantendo a estrutura de pastas original. Modifique o
+arquivo executar.sh ou o arquivo executar.bat de acordo com os
+comentários dentro do próprio arquivo, para escolher a pasta e
+porta de serviço do programa.</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<h2 class="western">O aplicativo</h2>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Para
+usar o aplicativo, você deve iniciar o servidor através do script
+executar fornecido no pacote do programa (devidamente alterado para
+sua instalação), ou diretamente do prompt de comando, através do
+comando: node main.js</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Ao
+iniciar, o servidor mostra uma mensagem com o endereço IP onde está
+atendendo a solicitações (e.g. <a href="http://192.168.0.10:8080/">http://192.168.0.10:8080</a>).
+Use este endereço nos computadores clientes para ativar o
+aplicativo.</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Na
+tela do aplicativo, há um menu suspenso para escolha do dicionário.
+Os nomes dos arquivos fornecidos são da forma pt_en.csv, onde o
+primeiro par de letras é o idioma dos verbetes e o segundo é o
+idioma das acepções. As siglas disponíveis são: pt para
+Português, en para Inglês, es para Espanhol e de para Alemão.</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Ao
+escolher o arquivo, uma lista com os primeiros verbetes no dicionário
+é mostrada. Ao escolher um desses verbetes, a acepção
+correspondente é apresentada.</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Você
+pode navegar na lista de verbetes com os botões |&lt;&lt; (para
+voltar ao início), Anterior (para voltar na lista), Próxima (para
+avançar na lista) e &gt;|| (para avançar até os últimos verbetes
+do dicionário).</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Se
+você digitar uma palavra na caixa de texto e ativar o botão Buscar,
+a lista de verbetes será atualizada para conter as palavras mais
+próximas da indicada. A palavra buscada pode não estar na lista,
+porque os dicionários fornecidos são pequenos (cerca de 2.000
+verbetes para cada um).</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<h2 class="western">Para desenvolvedores</h2>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Os
+arquivos de dicionário são do tipo .csv, com colunas separadas por
+tabulação (\t), onde a primeira coluna é o verbete, e as colunas
+seguintes contêm as acepções (traduções) para o verbete. Cada
+coluna será mostrada em uma nova linha na área de acepções da
+tela. Nos arquivos fornecidos, cada acepção consiste de uma coluna
+contendo a palavra, a coluna seguinte contendo a classe gramatical,
+gênero, número e outras propriedades aplicáveis, e uma terceira
+coluna vazia, que gera uma linha em branco usada para separar as
+acepções.</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Você
+pode criar novos arquivos de dicionário usando o mesmo formato, e
+copiá-los para a pasta recursos da instalação. Note que os
+dicionários têm que ser ordenados alfabeticamente pela primeira
+coluna.</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">O
+arquivo main.js contém o código do servidor. Optamos por utilizar
+apenas os recursos fornecidos com a instalação básica do node.js.
+Com isso, o servidor HTTP implementa apenas a funcionalidade básica
+necessária à execução do aplicativo. Se você deseja um servidor
+mais completo, procure na documentação e grupos de apoio ao node.js
+por soluções melhores.</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">Os
+arquivos do lado cliente estão localizados na pasta cliente. A tela
+é implementada em HTML. Veja o arquivo index.html. O script que roda
+do lado do cliente está no arquivo mini_dic.js.</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<h2 class="western">Licença de uso</h2>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="FreeSans"><font size="3" style="font-size: 12pt">Este
+trabalho foi originalmente criado por João Alexandre Vianna
+(<a href="mailto:jvianna@gmail.com">jvianna@gmail.com</a>) e está
+licenciado sob a Licença Attribution-NonCommercial-ShareAlike 4.0
+International</font></font> <font face="FreeSans"><font size="3" style="font-size: 12pt">Creative
+Commons. Para ver</font></font> <font face="FreeSans"><font size="3" style="font-size: 12pt">uma
+cópia desta licença, visite
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>
+ou mande uma carta para Creative Commons, PO Box 1866, Mountain View,
+CA 94042, USA.</font></font></p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="FreeSans"><font size="2" style="font-size: 10pt">Veja
+um sumário dos termos da licença (não substitui o texto original,
+no site indicado acima):</font></font></p>
+<div id="deed-main" dir="ltr"><p class="western"><br/>
+<br/>
+
+	</p>
+	<div id="deed-main-content" dir="ltr"><p class="western"><br/>
+<br/>
+
+		</p>
+		<div id="deed-rights" dir="ltr"><p class="western" align="left"><a name="__RefHeading___Toc143_1932782062"></a>
+			<b>Você tem o direito de:</b></p>
+			<ul>
+				<li><p class="western" align="left" style="margin-bottom: 0cm"><strong><font face="FreeSans"><font size="2" style="font-size: 10pt">Compartilhar</font></font></strong>
+				— <font face="FreeSans"><font size="2" style="font-size: 10pt">copiar
+				e redistribuir o material em qualquer suporte ou formato;</font></font></p>
+				<li><p class="western" align="left" style="margin-bottom: 0cm"><a name="devnations-container"></a><a name="more-container"></a><a name="license-freedoms-no-icons"></a>
+				<strong><font face="FreeSans"><font size="2" style="font-size: 10pt">Adaptar</font></font></strong>
+				— <font face="FreeSans"><font size="2" style="font-size: 10pt">misturar,
+				transformar, e criar a partir do material;</font></font></p>
+				<li><p class="western" align="left" style="margin-bottom: 0cm"><font face="FreeSans"><font size="2" style="font-size: 10pt">O
+				licenciante não pode revogar estes direitos desde que você
+				respeite os termos da licença.</font></font></p>
+			</ul>
+		</div>
+		<div id="deed-conditions" dir="ltr"><p class="western"><a name="__RefHeading___Toc145_1932782062"></a>
+			<b>De acordo com os termos seguintes:</b></p>
+			<ul>
+				<li><p class="western" align="left"><a name="appropriate_credit_popup"></a><a name="indicate_changes_popup"></a><a name="by-more-container"></a>
+				<strong><font face="FreeSans"><font size="2" style="font-size: 10pt">Atribuição</font></font></strong>
+				— <font face="FreeSans"><font size="2" style="font-size: 10pt">Você
+				deve dar o <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR#">crédito
+				apropriado</a>, prover um link para a licença e <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR#">indicar
+				se mudanças foram feitas</a>. Você deve fazê-lo em qualquer
+				circunstância razoável, mas de maneira alguma que sugira ao
+				licenciante a apoiar você ou o seu uso. </font></font>
+				</p>
+				<li><p class="western" align="left"><a name="nc-more-container"></a><a name="commercial_purposes_popup"></a>
+				<strong><font face="FreeSans"><font size="2" style="font-size: 10pt">Não
+				Comercial</font></font></strong> — <font face="FreeSans"><font size="2" style="font-size: 10pt">Você
+				não pode usar o material para <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR#">fins
+				comerciais</a>. </font></font>
+				</p>
+				<li><p class="western" align="left"><a name="same_license_popup"></a><a name="sa-more-container"></a>
+				<strong><font face="FreeSans"><font size="2" style="font-size: 10pt">Compartilha
+				Igual</font></font></strong> — <font face="FreeSans"><font size="2" style="font-size: 10pt">Se
+				você remixar, transformar, ou criar a partir do material, tem de
+				distribuir as suas contribuições sob a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR#">mesma
+				licença</a> que o original. </font></font>
+				</p>
+			</ul>
+		</div>
+		<ul>
+			<li><p class="western" align="left"><a name="deed-conditions-no-icons"></a><a name="technological_measures_popup"></a>
+			<strong><font face="FreeSans"><font size="2" style="font-size: 10pt">Sem
+			restrições adicionais</font></font></strong> — <font face="FreeSans"><font size="2" style="font-size: 10pt">Você
+			não pode aplicar termos jurídicos ou <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR#">medidas
+			de caráter tecnológico</a> que restrinjam legalmente outros de
+			fazerem algo que a licença permita. </font></font>
+			</p>
+			<p class="western" align="left"><font face="FreeSans"><font size="2" style="font-size: 10pt"><b>Avisos:
+			</b></font></font>
+			</p>
+		</ul>
+		<div id="deed-understanding" dir="ltr">
+			<ul><li><p class="western" align="left" style="margin-bottom: 0cm"><a name="exception_or_limitation_popup"></a>
+				<font face="FreeSans"><font size="2" style="font-size: 10pt">Você
+				não tem de cumprir com os termos da licença relativamente a
+				elementos do material que estejam no domínio público ou cuja
+				utilização seja permitida por uma <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR#">exceção
+				ou limitação</a> que seja aplicável. </font></font>
+				</p>
+				<li><p class="western" align="left"><a name="publicity_privacy_or_moral_rights_popup"></a><a name="referrer-metadata-container"></a>
+				<font face="FreeSans"><font size="2" style="font-size: 10pt">Não
+				são dadas quaisquer garantias. A licença pode não lhe dar
+				todas as autorizações necessárias para o uso pretendido. Por
+				exemplo, outros direitos, tais como <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR#">direitos
+				de imagem, de privacidade ou direitos morais</a>, podem limitar o
+				uso do material. </font></font>
+				</p>
+			</ul>
+		</div>
+	</div>
+</div>
+<p class="western"><a name="get_this"></a><a href="https://wiki.creativecommons.org/FAQ"><font face="FreeSans"><font size="2" style="font-size: 10pt">Saiba
+mais</font></font></a><a href="https://wiki.creativecommons.org/FAQ">
+</a><font face="FreeSans"><font size="2" style="font-size: 10pt">sobre
+licenciamento</font></font> <font face="FreeSans"><font size="2" style="font-size: 10pt">CC
+(Creative Commons), ou</font></font> <font face="FreeSans"><font size="2" style="font-size: 10pt"><a href="https://creativecommons.org/choose/results-one?license_code=by-nc-sa&amp;amp;jurisdiction=&amp;amp;version=4.0&amp;amp;lang=pt_BR">use
+</a><a href="https://creativecommons.org/choose/results-one?license_code=by-nc-sa&amp;amp;jurisdiction=&amp;amp;version=4.0&amp;amp;lang=pt_BR">a
+</a><a href="https://creativecommons.org/choose/results-one?license_code=by-nc-sa&amp;amp;jurisdiction=&amp;amp;version=4.0&amp;amp;lang=pt_BR">licen</a><a href="https://creativecommons.org/choose/results-one?license_code=by-nc-sa&amp;amp;jurisdiction=&amp;amp;version=4.0&amp;amp;lang=pt_BR">ça</a></font></font>
+<font face="FreeSans"><font size="2" style="font-size: 10pt">para seu
+próprio material. </font></font>
+</p>
+<p class="western" align="left"><font face="FreeSans"><font size="2" style="font-size: 10pt">Esta
+página está disponível nas seguintes línguas: <br/>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.id">Bahasa
+Indonesia</a> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ms">Bahasa
+Malaysia</a> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Castellano</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es_ES">Castellano
+(España)</a> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca">Català</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.da">Dansk</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de">Deutsch</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">English</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.eo">Esperanto</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">français</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.gl">Galego</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.hr">hrvatski</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it">Italiano</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.lv">Latviski</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.lt">Lietuvių</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.hu">Magyar</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.nl">Nederlands</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.no">norsk</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pl">polski</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt">Português</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR">Português
+(BR)</a> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ro">română</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.sl">Slovenščina</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi">suomeksi</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.sv">svenska</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.tr">Türkçe</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.is">íslenska</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.cs">čeština</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.el">Ελληνικά</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.be">Беларуская</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ru">русский</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.uk">українська</a>
+</font></font><font face="FreeSans"><span lang="hi-IN"><font face="FreeSans"><font size="2" style="font-size: 10pt"><span lang="hi-IN"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ar">العربية</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fa">پارسی</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.bn">বাংলা</a>
+</span></font></font></span></font><font face="Noto Serif CJK SC"><span lang="zh-CN"><font face="FreeSans"><font size="2" style="font-size: 10pt"><span lang="zh-CN"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">中文</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">日本語</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_TW">華語
+</a></span></font></font></span></font><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_TW"><font face="FreeSans"><font size="2" style="font-size: 10pt">(</font></font><font face="Noto Serif CJK SC"><span lang="zh-CN"><font face="FreeSans"><font size="2" style="font-size: 10pt"><span lang="zh-CN">台灣</span></font></font></span></font><font face="FreeSans"><font size="2" style="font-size: 10pt">)</font></font></a>
+<font face="Noto Serif CJK SC"><span lang="zh-CN"><font face="FreeSans"><font size="2" style="font-size: 10pt"><span lang="zh-CN"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko">한국어</a>
+</span></font></font></span></font>
+</p>
+<p class="western" align="left"><br/>
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+</body>
+</html>

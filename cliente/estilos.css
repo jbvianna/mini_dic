@@ -1,0 +1,35 @@
+/* CSS para Aplicativos - João Vianna (jvianna@gmail.com) */
+/* Tamanhos e alinhamentos */
+body {
+  margin: 0 auto;
+  line-height: 1.2;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  background-color: #f0f0f0; }
+
+main { margin-left:1em; margin-right:1em; }
+
+h1, h2, h3, h4, h5, h6 { page-break-after: avoid; }
+
+h1 { text-align: center; font-size:6vw; }
+
+h2 { text-align: left; font-size:5vw; }
+
+h3 { text-align: left; font-size:4vw; }
+
+h4 { text-align: left; font-size:3vw; }
+
+h5 { text-align: left; font-size:2.5vw; }
+
+h6 { text-align: left; font-size:2vw; }
+
+p { text-align: left; margin-bottom: 0.1em; }
+
+input { font-size: 1.5vw; }
+
+select { font-size: 1.5vw; }
+
+option { font-size: 1.5vw; }
+
+textarea { font-size: 1.2vw; }

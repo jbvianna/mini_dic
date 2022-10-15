@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mini Dic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="joao" />
+    <meta name="created" content="2020-06-18" />
+    <meta name="description" content="Mini Dicionário - Lido de Arquivo" />
+
+    <link rel="shortcut icon" href="images/mini_dic_ico.png" type="image/png" />
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <main>
+      <h3>Mini Dicionário</h3>
+      <hr />
+      <p>Escolha um dicionário:</p>
+      <select id="ls-dicionarios">
+      </select>
+      <p>
+        <label for="tx-palavra">Palavra: </label>
+        <input type="text" id="tx-palavra" />
+        <input type="submit" id="bt-buscar" value="Buscar" title="Buscar palavra no dicionário." />
+      </p>
+      <div class="verbetes">
+        <hr />
+        <input type="submit" id="bt-inicio" value="||&lt;" title="Início da lista" />
+        <input type="submit" id="bt-anterior" value="Anterior" />
+        <input type="submit" id="bt-proxima" value="Próxima" />
+        <input type="submit" id="bt-fim" value="&gt;||" title="Fim da lista" />
+        <p>
+        </p>
+        <p>Escolha um verbete:</p>
+        <select id="ls-verbetes" size="10">
+        </select>
+      </div>
+      <div class="resultado">
+        <hr />
+        <pre id="tx-definicao">
+        </pre>
+      </div>
+    </main>
+    <script src="mini_dic.js" defer="true"></script>
+    <noscript>Esse programa só funciona com JavaScript ativado.</noscript>
+  </body>
+</html>
